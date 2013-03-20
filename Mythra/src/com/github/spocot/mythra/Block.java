@@ -33,7 +33,7 @@ public class Block {
 	
 	public boolean checkCollide(Player player){
 		
-		//Return false if the block is not collideable
+		//Return false if the block is not collidable
 		if(!canCollide)return false;
 		
 		int pX = player.getX();
