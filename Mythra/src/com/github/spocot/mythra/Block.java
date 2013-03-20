@@ -30,4 +30,21 @@ public class Block {
 		g.setColor(color);
 		g.fillRect(x, y, width, height);
 	}
+	
+	public boolean checkCollide(Player player){
+		
+		//Return false if the block is not collideable
+		if(!canCollide)return false;
+		
+		int pX = player.getX();
+		int pY = player.getY();
+		int pWidth = player.getWidth();
+		int pHeight = player.getHeight();
+		
+		//Check collision
+		if(pX + pWidth > x && pX < x + width && pY + pHeight > y && pY < y + height)
+			return true;
+		else
+			return false;
+	}
 }
