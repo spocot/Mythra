@@ -13,14 +13,8 @@ public class Map {
 	}
 	
 	public void render(Graphics g){
-		int currentBlock = 0;
-		
-		//Placeholder rending code
-		//Renders in a line by line fashion
-		for(int i = 0; i < 500; i =+ 10){
-			for(int j = 0; j < 500; j =+ 10){
-				blocks.get(currentBlock++).render(g, j, i);
-			}
+		for(int i = 0; i < blocks.size(); i++){
+			blocks.get(i).render(g);
 		}
 	}
 }

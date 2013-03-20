@@ -15,12 +15,18 @@ public class Block {
 	//Color variable
 	private Color color;
 	
-	public Block(boolean canCollide, Color color){
+	//Location of the block
+	private int x;
+	private int y;
+	
+	public Block(boolean canCollide, Color color, int x, int y){
 		this.canCollide = canCollide;
 		this.color = color;
+		this.x = x;
+		this.y = y;
 	}
 	
-	public void render(Graphics g, int x, int y){
+	public void render(Graphics g){
 		g.setColor(color);
 		g.fillRect(x, y, width, height);
 	}
