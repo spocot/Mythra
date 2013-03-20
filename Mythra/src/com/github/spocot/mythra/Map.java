@@ -21,7 +21,7 @@ public class Map {
 	public boolean checkCollide(Player player){
 		boolean collided = false;
 		for(int i = 0; i < blocks.size(); i++){
-			collided = checkCollide(player) ? true : collided;
+			collided = blocks.get(i).checkCollide(player) ? true : collided;
 		}
 		return collided;
 	}
