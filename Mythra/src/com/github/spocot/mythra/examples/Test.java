@@ -1,4 +1,4 @@
-package examples;
+package com.github.spocot.mythra.examples;
 
 import javax.swing.JFrame;
 
