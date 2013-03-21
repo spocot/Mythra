@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class MythraPanel extends AnimationPanel{
 
-	private ArrayList<Block> blocks = new ArrayList<Block>();
+	private Block[][] blocks;
 	private Map map;
 	private Player player = new Player(100,100);
 
@@ -20,14 +20,7 @@ public class MythraPanel extends AnimationPanel{
 
 	public MythraPanel(int pWidth, int pHeight) {
 		super(pWidth, pHeight);
-
-		for(int x = 0; x < 500; x += 10){
-			for(int y = 0; y < 500; y += 10){
-				blocks.add(new BlockGrass(x,y));
-			}
-		}
-		blocks.set(0, new BlockWall(0,0));
-		map = new Map(blocks);
+		map = new Map();
 	}
 
 	@Override
