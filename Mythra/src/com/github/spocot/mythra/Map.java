@@ -1,7 +1,6 @@
 package com.github.spocot.mythra;
 
 import java.awt.Graphics;
-import java.util.ArrayList;
 
 public class Map {
 
@@ -38,6 +37,8 @@ public class Map {
 		}
 		return collided;
 	}
+	
+	public Block[][] getBlocks(){return blocks;}
 
 	public void update(Block[][] blocks){
 		this.blocks = blocks;
