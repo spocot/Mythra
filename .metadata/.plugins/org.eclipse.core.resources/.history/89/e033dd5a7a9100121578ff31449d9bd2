@@ -1,0 +1,12 @@
+package com.github.spocot.mythra;
+
+import java.awt.Color;
+
+public class BlockGrass extends Block{
+
+	public BlockGrass(boolean canCollide, Color color, int x, int y) {
+		super(canCollide, color, x, y);
+		// TODO Auto-generated constructor stub
+	}
+
+}

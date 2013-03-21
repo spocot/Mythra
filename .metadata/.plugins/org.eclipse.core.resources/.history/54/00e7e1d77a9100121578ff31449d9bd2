@@ -1,0 +1,12 @@
+package com.github.spocot.mythra;
+
+public class Player {
+
+	//Location variable
+	private int x;
+	private int y;
+	
+	public Player(int x, int y){
+		
+	}
+}

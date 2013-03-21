@@ -1,0 +1,11 @@
+package com.github.spocot.mythra;
+
+public enum Direction {
+	
+	private Direction(int xVar, int yVar){
+		
+	}
+	
+	public int xVar(){return xVar;}
+	public int yVar(){return yVar;}
+}

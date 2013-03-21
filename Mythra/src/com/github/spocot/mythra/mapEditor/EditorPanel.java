@@ -101,6 +101,7 @@ public class EditorPanel extends AnimationPanel{
 	public void loadMap(){
 		MapLoader loader = new MapLoader(JOptionPane.showInputDialog("Enter the name of the file to load:"));
 		map = loader.loadMap();
+		blocks = map.getBlocks();
 	}
 
 	public void fillMap(){

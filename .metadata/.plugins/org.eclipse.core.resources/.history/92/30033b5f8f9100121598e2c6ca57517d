@@ -1,0 +1,5 @@
+package com.github.spocot.mythra;
+
+public class Direction {
+
+}

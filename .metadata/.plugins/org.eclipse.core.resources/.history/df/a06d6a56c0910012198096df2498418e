@@ -1,0 +1,10 @@
+package com.github.spocot.mythra;
+
+import java.awt.Color;
+
+public class BlockRoad extends Block{
+
+	public BlockRoad(int x, int y) {
+		super(false, Color.gray, x, y);
+	}
+}

@@ -1,0 +1,21 @@
+package com.github.spocot.mythra;
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+public class Block {
+	
+	//Variable for collision
+	private boolean canCollide;
+	
+	//Color variable
+	private Color color;
+	
+	public Block(boolean canCollide, Color color){
+		this.canCollide = canCollide;
+		this.color = color;
+	}
+	public void render(Graphics g){
+		
+	}
+}

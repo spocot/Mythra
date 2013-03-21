@@ -1,0 +1,10 @@
+package com.github.spocot.mythra;
+
+import java.awt.Graphics;
+
+public class Block {
+
+	public void render(Graphics g){
+		
+	}
+}

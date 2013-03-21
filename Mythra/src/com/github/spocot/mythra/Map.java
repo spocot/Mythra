@@ -1,8 +1,9 @@
 package com.github.spocot.mythra;
 
 import java.awt.Graphics;
+import java.io.Serializable;
 
-public class Map {
+public class Map implements Serializable{
 
 	//ArrayList containing all of the blocks on the map
 	private Block[][] blocks;

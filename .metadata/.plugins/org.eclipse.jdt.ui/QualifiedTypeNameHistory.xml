@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.awt.Graphics"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="javax.swing.JFrame"/>
+<fullyQualifiedTypeName name="com.github.spocot.mythra.MythraPanel"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.github.spocot.mythra.Map"/>
+<fullyQualifiedTypeName name="com.github.spocot.mythra.AnimationPanel"/>
+<fullyQualifiedTypeName name="com.github.spocot.mythra.BlockAir"/>
+</qualifiedTypeNameHistroy>

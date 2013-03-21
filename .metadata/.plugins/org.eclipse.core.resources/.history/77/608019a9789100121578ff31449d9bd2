@@ -1,0 +1,13 @@
+package com.github.spocot.mythra;
+
+import java.awt.Graphics;
+
+public class Block {
+
+	public Block(boolean canCollide, Color color){
+		
+	}
+	public void render(Graphics g){
+		
+	}
+}

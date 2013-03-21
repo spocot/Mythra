@@ -2,8 +2,9 @@ package com.github.spocot.mythra;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.io.Serializable;
 
-public class Block {
+public class Block implements Serializable{
 	
 	//Height and width
 	private static final int width = 10;
