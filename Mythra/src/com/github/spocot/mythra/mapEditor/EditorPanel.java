@@ -11,7 +11,7 @@ import com.github.spocot.mythra.*;
 public class EditorPanel extends AnimationPanel{
 
 	private Block currentBlock = new BlockGrass(0,0);
-	
+
 	private Map map;
 
 	private Block[][] blocks;
@@ -38,14 +38,8 @@ public class EditorPanel extends AnimationPanel{
 	public void keyPressedEvents(KeyEvent e) {
 		int keyCode = e.getKeyCode();
 		switch(keyCode){
-		case KeyEvent.VK_S:{
-			MapLoader loader = new MapLoader(JOptionPane.showInputDialog("Enter the name to save under:"));
-			loader.writeMap(map);
-		}break;
-		case KeyEvent.VK_L:{
-			MapLoader loader = new MapLoader(JOptionPane.showInputDialog("Enter the name of the file to load:"));
-			map = loader.loadMap();
-		}break;
+		case KeyEvent.VK_S:saveMap();break;
+		case KeyEvent.VK_L:loadMap();break;
 		}
 	}
 
@@ -54,7 +48,7 @@ public class EditorPanel extends AnimationPanel{
 		// TODO Auto-generated method stub
 
 	}
-	
+
 	public void changeBlock(Block block){
 		currentBlock = block;
 	}
@@ -98,9 +92,21 @@ public class EditorPanel extends AnimationPanel{
 	public void mouseReleasedEvents(MouseEvent e) {
 
 	}
-	
+
+	public void saveMap(){
+		MapLoader loader = new MapLoader(JOptionPane.showInputDialog("Enter the name to save under:"));
+		loader.writeMap(map);
+	}
+
+	public void loadMap(){
+		MapLoader loader = new MapLoader(JOptionPane.showInputDialog("Enter the name of the file to load:"));
+		map = loader.loadMap();
+	}
+
 	public void fillMap(){
+		map = null;
 		map = new Map(currentBlock);
+		blocks = map.getBlocks();
 		System.out.println("Map filled");
 	}
 }

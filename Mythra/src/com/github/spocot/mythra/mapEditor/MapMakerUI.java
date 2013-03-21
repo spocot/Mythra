@@ -1,5 +1,7 @@
 package com.github.spocot.mythra.mapEditor;
 
+import javax.swing.JOptionPane;
+
 import com.github.spocot.mythra.*;
 
 /**
@@ -89,8 +91,18 @@ public class MapMakerUI extends javax.swing.JFrame {
 		});
 
 		saveButton.setText("Save");
+		saveButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				saveButtonActionPerformed(evt);
+			}
+		});
 
 		loadButton.setText("Load");
+		loadButton.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				loadButtonActionPerformed(evt);
+			}
+		});
 
 		newCustomButton.setText("New Custom Block");
 
@@ -161,9 +173,14 @@ public class MapMakerUI extends javax.swing.JFrame {
 	private void roadRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                  
 		editorPanel.changeBlock(new BlockRoad(0,0));
 	}                                                 
-
 	private void fillButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                  
 		editorPanel.fillMap();
+	}
+	private void saveButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                  
+		editorPanel.saveMap();
+	}
+	private void loadButtonActionPerformed(java.awt.event.ActionEvent evt) {                                                  
+		editorPanel.loadMap();
 	}
 	
 	/**
