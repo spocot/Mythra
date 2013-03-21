@@ -160,7 +160,7 @@ public class MythraPanel extends AnimationPanel{
 
 	@Override
 	public void updateGame() {
-		// TODO Auto-generated method stub
+		blocks = map.getBlocks();
 		int prevX = player.getX();
 		int prevY = player.getY();
 		player.update();
@@ -170,7 +170,6 @@ public class MythraPanel extends AnimationPanel{
 
 	@Override
 	public void drawGame(Graphics g) {
-		// TODO Auto-generated method stub
 		map.render(g);
 		player.render(g);
 	}
