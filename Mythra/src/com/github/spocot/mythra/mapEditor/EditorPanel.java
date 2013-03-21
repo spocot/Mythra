@@ -10,22 +10,22 @@ import com.github.spocot.mythra.*;
 
 public class EditorPanel extends AnimationPanel{
 
-	private volatile boolean buildingSelected = false;
-
+	private Block currentBlock = new BlockGrass(0,0);
+	
 	private Map map;
 
-	private Block[][] mapOutline;
+	private Block[][] blocks;
 
 	//Constructor for a blank map
 	public EditorPanel() {
 		super(500, 500);
 		map = new Map();
+		blocks = map.getBlocks();
 	}
 
 	@Override
 	public void mouseDraggedEvents(MouseEvent e) {
-		if(!buildingSelected)
-			mouseClickedEvents(e);
+		mouseClickedEvents(e);
 	}
 
 	@Override
@@ -54,10 +54,15 @@ public class EditorPanel extends AnimationPanel{
 		// TODO Auto-generated method stub
 
 	}
+	
+	public void changeBlock(Block block){
+		currentBlock = block;
+	}
 
 	@Override
 	public void updateGame() {
-
+		map.update(blocks);
+		blocks = map.getBlocks();
 	}
 
 	@Override
@@ -67,7 +72,9 @@ public class EditorPanel extends AnimationPanel{
 
 	@Override
 	public void mouseClickedEvents(MouseEvent e) {
-		
+		int i = e.getX() / 10;
+		int j = e.getY() / 10;
+		blocks[i][j] = new Block(currentBlock.isCollideable(),currentBlock.getColor(), i * 10, j * 10);
 	}
 
 	@Override
@@ -90,5 +97,10 @@ public class EditorPanel extends AnimationPanel{
 	@Override
 	public void mouseReleasedEvents(MouseEvent e) {
 
+	}
+	
+	public void fillMap(){
+		map = new Map(currentBlock);
+		System.out.println("Map filled");
 	}
 }

@@ -26,6 +26,11 @@ public class Block {
 		this.y = y;
 	}
 	
+	public void setPosition(int x, int y){
+		this.x = x;
+		this.y = y;
+	}
+	
 	public void render(Graphics g){
 		g.setColor(color);
 		g.fillRect(x, y, width, height);
@@ -47,4 +52,11 @@ public class Block {
 		else
 			return false;
 	}
+	
+	public int getX(){return x;}
+	public int getY(){return y;}
+	
+	public boolean isCollideable(){return canCollide;}
+	
+	public Color getColor(){return color;}
 }

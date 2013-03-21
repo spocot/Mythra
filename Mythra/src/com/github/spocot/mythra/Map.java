@@ -19,6 +19,15 @@ public class Map {
 			}
 		}
 	}
+	
+	public Map(Block block){
+		blocks = new Block[50][50];
+		for(int i = 0; i < 50; i++){
+			for(int j = 0; j < 50; j++){
+				blocks[i][j] = new Block(block.isCollideable(), block.getColor(), i * 10, j * 10);
+			}
+		}
+	}
 
 	public void render(Graphics g){
 		for(int i = 0; i < blocks.length; i++){
